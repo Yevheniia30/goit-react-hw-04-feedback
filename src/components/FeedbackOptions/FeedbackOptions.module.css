@@ -1,0 +1,28 @@
+.btn{
+    width: 100px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+
+}
+.btn:not(:last-child){
+    margin-right: 20px;
+}
+.btn:hover,
+.btn:focus{
+    transform: scale(1.1);
+}
+
+.good{
+    background-color: #78bd78;
+}
+
+.bad{
+    background-color: #be6464;
+}
+
+.neutral{
+    background-color: #e6e688;
+}

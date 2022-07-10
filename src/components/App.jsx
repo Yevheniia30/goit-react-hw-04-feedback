@@ -10,23 +10,32 @@ export const App = () => {
   //   bad: 0,
   // });
 
+  const total = 20;
+
   return (
     <div
       style={{
         height: '100vh',
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: 40,
+        // fontSize: 40,
         color: '#010101',
       }}
     >
-      <Section title="Leave feedback">
-        <FeedbackOptions />
-      </Section>
-      <Section>
-        <Statistics />
-      </Section>
+      <div>
+        <Section title="Please leave feedback">
+          <FeedbackOptions />
+        </Section>
+        {total ? (
+          <Section title="Statistics">
+            <Statistics />
+          </Section>
+        ) : (
+          <p>No feedbacks for now</p>
+        )}
+      </div>
     </div>
   );
 };

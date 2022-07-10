@@ -1,10 +1,13 @@
-import React from 'react';
 // import PropTypes from 'prop-types';
-// import s from './Section.module.css';
+import s from './Section.module.css';
 
-export const Section = props => {
-  console.log('props', props);
-  return <div>{props.children}</div>;
+export const Section = ({ title, children }) => {
+  console.log('props', children);
+  return (
+    <section className={s.section}>
+      <h2>{title}</h2> {children}
+    </section>
+  );
 };
 
 Section.propTypes = {};
