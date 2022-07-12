@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import s from './FeedbackOptions.module.css';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-  console.log('options', options);
+  // console.log('options', options);
 
   return (
     <>
