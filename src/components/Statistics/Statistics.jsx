@@ -1,15 +1,31 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import s from './Statistics.module.css';
 
-export const Statistics = ({ good = 10, neutral = 8, bad = 2, total = 20 }) => {
+export const Statistics = ({ good, neutral, bad, total, positiveValue }) => {
+  // console.log(
+  //   'good, neutral, bad, total, positiveValue',
+  //   good,
+  //   neutral,
+  //   bad,
+  //   total,
+  //   positiveValue
+  // );
   return (
     <div className={s.stats}>
       <p>Good: {good}</p>
-      <p>Bad: {bad}</p>
       <p>Neutral: {neutral}</p>
-      <b>Total: {total}</b>
+      <p>Bad: {bad}</p>
+
+      <p className={s.bold}>Total: {total}</p>
+      <p className={s.bold}>Positive feedback: {positiveValue}%</p>
     </div>
   );
 };
 
-Statistics.propTypes = {};
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positiveValue: PropTypes.number.isRequired,
+};
