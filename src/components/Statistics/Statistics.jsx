@@ -2,14 +2,6 @@ import PropTypes from 'prop-types';
 import s from './Statistics.module.css';
 
 export const Statistics = ({ good, neutral, bad, total, positiveValue }) => {
-  // console.log(
-  //   'good, neutral, bad, total, positiveValue',
-  //   good,
-  //   neutral,
-  //   bad,
-  //   total,
-  //   positiveValue
-  // );
   return (
     <div className={s.stats}>
       <p>Good: {good}</p>

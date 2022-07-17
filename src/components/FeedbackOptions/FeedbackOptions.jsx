@@ -2,8 +2,6 @@ import PropTypes from 'prop-types';
 import s from './FeedbackOptions.module.css';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-  // console.log('options', options);
-
   return (
     <>
       {options.map(item => (
