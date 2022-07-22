@@ -17,27 +17,27 @@ export const App = () => {
 
   const { good, neutral, bad } = state;
 
-  const countPositiveFeedbackPercentage = (good, total) => {
-    return Math.round((good / total) * 100);
-  };
-
   const handleLeaveFeedBack = e => {
-    const feedback = e.target.dataset.feedback;
-    // console.log('feedBack', feedback);
+    // console.log('e.currenttarget', e.currentTarget);
+    const { name } = e.currentTarget;
     setState(prevState => ({
       ...prevState,
-      [feedback]: prevState[feedback] + 1,
+      [name]: prevState[name] + 1,
     }));
   };
 
-  const countTotalFeedback = values => {
+  const countTotalFeedback = () => {
+    const values = Object.values(state);
     return values?.reduce((acc, value) => acc + value);
   };
 
+  const countPositiveFeedbackPercentage = () => {
+    return Math.round((good / total) * 100);
+  };
+
   const options = Object.keys(state);
-  const values = Object.values(state);
-  const total = countTotalFeedback(values);
-  const positiveValue = countPositiveFeedbackPercentage(good, total);
+  const total = countTotalFeedback();
+  const positiveValue = countPositiveFeedbackPercentage();
 
   return (
     <div
