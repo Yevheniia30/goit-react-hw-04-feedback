@@ -17,9 +17,9 @@ export const App = () => {
 
   const { good, neutral, bad } = state;
 
-  const handleLeaveFeedBack = e => {
+  const handleLeaveFeedBack = name => {
     // console.log('e.currenttarget', e.currentTarget);
-    const { name } = e.currentTarget;
+    // const { name } = e.currentTarget;
     setState(prevState => ({
       ...prevState,
       [name]: prevState[name] + 1,
